@@ -29,7 +29,7 @@ uitox_db.ini說明
 extension=uitox_db.so
 
 ;the encrytp key 16 char   16碼加密字串（如需更改,之前所有加密的檔案需重做）
-uitox_db.encrytp_key=7g1he3yKCQNjROeh
+uitox_db.encrytp_key=xxxxxxxxxxxxxxx
 
 ;connect db file 加密連線檔讀取位置
 uitox_db.connect_file_path=/home/webdata/htdocs/common/_new_acom/config_comm/db/enc_file
