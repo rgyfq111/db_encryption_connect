@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("uitox_db", "for uitox_db support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("uitox_db", "enable uitox_db support", "no");
+
+if (PHP_UITOX_DB != "no") {
+	EXTENSION("uitox_db", "uitox_db.c");
+}
+

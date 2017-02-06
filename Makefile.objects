@@ -1,0 +1,10 @@
+uitox_db.lo: /home/php-5.5.11/ext/uitox_db/uitox_db.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/php-5.5.11/ext/uitox_db $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/php-5.5.11/ext/uitox_db/uitox_db.c -o uitox_db.lo 
+clib.lo: /home/php-5.5.11/ext/uitox_db/clib.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/php-5.5.11/ext/uitox_db $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/php-5.5.11/ext/uitox_db/clib.c -o clib.lo 
+$(phplibdir)/uitox_db.la: ./uitox_db.la
+	$(LIBTOOL) --mode=install cp ./uitox_db.la $(phplibdir)
+
+./uitox_db.la: $(shared_objects_uitox_db) $(UITOX_DB_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_uitox_db) $(UITOX_DB_SHARED_LIBADD)
+
